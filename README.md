@@ -1,4 +1,4 @@
-WordleWorld es una aplicacion que ofrece al usuario varios modos de jugar a wordle y un sistema de mejoras con nivel. 
+WordleWorld es una aplicación Angular que ofrece al usuario varios modos de jugar a wordle y un sistema de mejoras con nivel. 
 
 Tiene implementados varios modos de juego: 
 
