@@ -1,0 +1,52 @@
+.survival-mode {
+    margin-top: 4rem;
+    @include mobile {
+        margin-top: 3rem;
+    }
+    .cont-sm {
+        width: 100%;
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .sm-section {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        width: 20rem; 
+        border-radius: 2rem;
+        box-shadow: 0 3px 5px black;
+        padding: 2rem 0;
+        @include tablet {
+            width: 17rem;
+        }
+        @include medium {
+            width: 14rem;
+        }
+        @include mobile {
+            width: 11rem;        
+            padding: 1rem 0;
+            gap: 1rem;
+        }
+        .sm-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        p, i {
+            font-size: 2.5rem;
+            @include tablet {
+                font-size: 2.3rem;
+            }
+            @include medium {
+                font-size: 2rem;
+            }
+            @include mobile {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}

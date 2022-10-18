@@ -1,0 +1,17 @@
+<div class="progress-bar-elem">
+    <!--<p>{{progressBarService.level}}</p>-->
+    <div class="pb-element dynamic">
+        <div [ngStyle]="{'width' : progressBarService.perc + '%'}" class="pbe-progress">
+            <div class="pbe-cont-perc">
+                <p>{{progressBarService.perc}}%</p>
+            </div>
+        </div>    
+    </div>
+    <div class="pbe-data">
+        <p class="pbe-data-actual">{{progressBarService.actual}} <span class="bold">xp</span> </p>
+        <p>/</p>
+        <p class="pbe-data-max">{{progressBarService.max}} <span class="bold">xp</span></p>
+    </div>
+</div>
+
+<!--<button (click)="progressBarService.add(100)">añadir</button>-->

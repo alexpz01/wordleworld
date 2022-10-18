@@ -1,0 +1,53 @@
+.user-info {margin-top: 3rem;}
+.cont-ui {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .ui-section {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        @include mobile {
+            gap: 1.2rem;
+        }
+    }
+    .ui-image {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 40rem;
+        overflow: hidden;
+        @include medium {
+            width: 7rem;
+            height: 7rem;
+        }
+        @include mobile {
+            width: 5.5rem;
+            height: 5.5rem;
+        }
+    }
+    .ui-level {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 4rem;
+        border-radius: 2rem;
+        gap: 1rem;
+        @include medium {
+            padding: 1.5rem 3rem;
+        }
+        @include mobile {
+            padding: 1rem 2rem;
+        }
+        p {
+            font-size: 3rem;
+            @include medium {
+                font-size: 2rem;
+            }
+            @include mobile {
+                font-size: 1.7rem;
+            }
+            
+        }
+    }
+
+}

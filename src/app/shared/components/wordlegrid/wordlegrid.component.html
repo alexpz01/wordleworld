@@ -1,0 +1,13 @@
+<div class="wordle">
+    <div class="cont-wordle">
+        <div class="wordle-title">
+            <h2 class="light">{{title}}</h2>
+        </div>
+        <div *ngFor="let line of wordle.wordleData; index as i" class="wordle-line line">
+            <div *ngFor="let letter of line; index as j" attr.data-block="{{j}}" attr.data-line="{{i}}" class="wordle-block block">
+                <p class="upper">{{letter}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<app-keyboard (addLetterEvent)="addLetter($event)"></app-keyboard>

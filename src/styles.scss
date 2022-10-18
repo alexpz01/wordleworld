@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;500;700;900&display=swap');
+@import './scss/generals/normalize.scss';
+@import './scss/generals/variables.scss';
+@import './scss/generals/mixins.scss';
+@import './scss/generals/generals.scss';
+@import './scss/generals/utils.scss';
+
+@import './scss/layout/shared/utils-bar.scss';
+@import './scss/layout/shared/menu.scss';
+@import './scss/layout/shared/blackscreen.scss';
+@import './scss/layout/shared/progress-bar-element.scss';
+@import './scss/layout/shared/stat-bar.scss';
+@import './scss/layout/wordle/wordle.scss';
+@import './scss/layout/wordle/keyboard.scss';
+@import './scss/layout/wordle/difficulty.scss';
+@import './scss/layout/wordle/survival.scss';
+@import './scss/layout/profile/user-info.scss';
+@import './scss/layout/profile/progress-bar.scss';
+@import './scss/layout/profile/user-stats.scss';
+@import './scss/layout/pop-ups/log-in.scss';
+
+

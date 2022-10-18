@@ -1,0 +1,26 @@
+<div class="user-stats">
+    <div class="cont cont-us dynamic over">
+        <h3>Estadisticas</h3>
+        <div class="cont-stats">
+            <div class="stats-bars">
+                <div class="stat-bar">
+                    <p>Wordle completados</p>
+                    <app-stat-bar [stateBarDataNames]="['ganados', 'perdidos']" [stateBarDataValues]="[12, 7]"></app-stat-bar>
+                </div>
+                <div class="stat-bar">
+                    <p>Victorias por numero de intentos</p>
+                    <app-stat-bar [stateBarDataNames]="['1 intento', '2 intentos', '3 intentos', '2 intentos', '1 intento']" [stateBarDataValues]="[16, 11, 7, 4, 1]"></app-stat-bar>
+                </div>
+                <div class="stat-bar">
+                    <p>Victorias por dificultad</p>
+                    <app-stat-bar [stateBarDataNames]="['a', 'b']" [stateBarDataValues]="[0, 0]"></app-stat-bar>
+                </div>
+            </div>
+            <div class="stats">
+                <div class="stat">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

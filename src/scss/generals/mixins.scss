@@ -1,0 +1,88 @@
+@mixin mobile {
+    @media (max-width: $mobile) {
+        & {
+            @content
+        }
+    }
+};
+
+@mixin medium {
+    @media (max-width: $medium) {
+        & {
+            @content
+        }
+    }
+};
+
+@mixin tablet {
+    @media (max-width: $tablet) {
+        & {
+            @content
+        }
+    }
+};
+
+@mixin allText {
+    p, h1, h2, h3, h4, a, i, label {
+        @content
+    }
+}
+
+@mixin blocksDivisionResponsive($fontSizeDiference, $sizeReducerMobile) {
+
+    & {
+        gap: calc($wordleSizePc * 1rem / $wordleSizePc);
+        @include tablet {
+            gap: calc($wordleSizeTablet * 1rem / $wordleSizePc);
+        }
+        @include medium {
+            gap: calc($wordleSizeMedium * 1rem / $wordleSizePc);
+        }
+        @include mobile {
+            gap: calc($wordleSizeMobile * 1rem / $wordleSizePc);
+        }
+        .line {
+            display: flex;
+            gap: calc($wordleSizePc * 1rem / $wordleSizePc);
+            @include tablet {
+                gap: calc($wordleSizeTablet * 1rem / $wordleSizePc);
+            }
+            @include medium {
+                gap: calc($wordleSizeMedium * 1rem / $wordleSizePc);
+            }
+            @include mobile {
+                gap: calc($wordleSizeMobile * 1rem / $wordleSizePc);
+            }
+        }
+        .block {
+            width: $wordleSizePc;
+            height: $wordleSizePc;
+            @include tablet {
+                width: $wordleSizeTablet;
+                height: $wordleSizeTablet;
+            }
+            @include medium {
+                width: $wordleSizeMedium;
+                height: $wordleSizeMedium;
+            }
+            @include mobile {
+                width: $wordleSizeMobile - $sizeReducerMobile;
+                height: $wordleSizeMobile - $sizeReducerMobile;
+            }
+            p, i {
+                font-size: calc($wordleSizePc - $fontSizeDiference);
+                @include tablet {
+                    font-size: calc($wordleSizeTablet - $fontSizeDiference);
+                }
+                @include medium {
+                    font-size: calc($wordleSizeMedium - $fontSizeDiference);
+                }
+                @include mobile {
+                    font-size: calc($wordleSizeMobile - $fontSizeDiference - $sizeReducerMobile);
+                }
+            }
+        }
+    }
+
+
+}

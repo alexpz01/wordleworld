@@ -1,0 +1,15 @@
+<div class="difficulty-level">
+    <div class="cont cont-dl">
+        <div class="dl-dropdown">
+            <div (click)="toggleDropdownMenu()" class="dl-select">
+                <p>{{difficulty}}</p>
+                <i [ngClass]="dropdownMenu ? 'fa-caret-up' : 'fa-caret-down'" class="fa-solid"></i>
+            </div>
+            <nav [class.show]="dropdownMenu" class="dl-nav dynamic over">
+                <a [routerLink]="[rootRoute + '/easy']" href="" class="dl-option"><p class="light">Easy</p></a>
+                <a [routerLink]="[rootRoute]" href="" class="dl-option"><p class="light">Normal</p></a>
+                <a [routerLink]="[rootRoute + '/hard']" href="" class="dl-option"><p class="light">Hard</p></a>
+            </nav>
+        </div>       
+    </div>
+</div>

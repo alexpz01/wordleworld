@@ -1,0 +1,161 @@
+.cont {
+    margin: 0 auto;
+    width: $tablet;
+    @include tablet {
+        width: $medium;
+    }
+    @include medium {
+        width: $mobile;
+    }
+    @include mobile {
+        width: 97%;
+    }
+}
+
+//Hace al elemento compatible con modo dia/noche
+
+.dynamic {
+    transition: $dynamicTransition;
+    background-color: $dayMode; 
+    @include allText {
+        color: $dayModeSecondary;
+    }
+    
+    &.night {
+        background-color: $nigthMode;
+        border-color: $nigthModeSecondary;
+        @include allText {
+            color: $nigthModeSecondary;
+        }   
+    }
+
+    &.over {
+        background-color: $dayModeOver;
+        &.night {
+            background-color: $nigthModeOver;
+        }
+    }
+
+    &.terciary {
+        background-color: $dayModeTerciary;
+        &.night {
+            background-color: $nigthModeTerciary;
+        }
+    }
+}
+
+.clickable {
+    transition: .5s;
+    cursor: pointer;
+    &.instant:hover {
+        transition: none;
+    }
+    &.short:hover {
+        transition: .15s;
+    }
+    &.long:hover {
+        transition: 1s;
+    }
+    &.bigger:hover {
+        transform: scale(1.1);
+    }
+    &.smaller:hover {
+        transform: scale(0.9);
+    }
+    &.black:hover {
+        background-color: black;
+        color: white;
+    }
+    &.white:hover {
+        background-color: white;
+        color: black;
+    }
+    &.opacity:hover {
+        filter: opacity(50%);
+    }
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 3rem;
+    width: fit-content;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: .2s;
+    background-color: rgb(255, 205, 205);
+    margin: 0 auto;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.secondary {
+    font-family: $secondaryFont;
+}
+
+.thin {
+    font-weight: $thin;
+}
+
+.light {
+    font-weight: $light;
+}
+
+.bold {
+    font-weight: $bold;
+}
+
+.black {
+    font-weight: $black;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.pop-up {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    .cont-popup {
+        position: relative;
+        padding: 4rem 2rem;
+        pointer-events: all;
+        transform: scale(0);
+        transition: .2s;
+        border-radius: 2rem;
+        height: fit-content;
+        width: 80rem;
+        margin-top: 15rem;
+        overflow: hidden;
+        &.show {
+            transform: scale(1);
+        }
+        .loading {
+            background-color: rgba(0, 0, 0, 0.676);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+            color: white;
+        }
+        .close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 2.5rem;
+        }
+    }
+    
+}

@@ -1,0 +1,48 @@
+.cont-keyboard {
+    width: fit-content;
+    margin: 6rem auto 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include blocksDivisionResponsive(1.5rem, .65rem);
+    @include mobile {
+        margin-top: 4rem;
+    }
+}
+
+.kb-line {
+    width: 100%;
+}
+
+.kb-key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 1rem;
+    p, i {
+        color: rgb(48, 48, 48)!important;
+    }
+    &.incorrect {
+        background-color: $incorrectColor;
+    }
+    &.half {
+        background-color: $halfColor;
+    }
+    &.correct {
+        background-color: $correctColor;
+    }
+}
+
+.delete, .intro {
+    flex-grow: 1;
+}
+
+.delete {
+    background-color: rgb(255, 159, 159);
+}
+
+.intro {
+    background-color: rgb(197, 255, 197);
+}
+

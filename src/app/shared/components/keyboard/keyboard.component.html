@@ -1,0 +1,15 @@
+<div class="keyboard">
+    <div class="cont-keyboard">
+        <div *ngFor="let line of keys; index as i" class="kb-line line">
+            <div *ngIf="i == 2" (click)="addLetter('Enter')" class="kb-key block intro clickable bigger">
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </div>
+            <div *ngFor="let block of line" (click)="addLetter(block)" attr.data-letter="{{block}}" class="kb-key block clickable bigger">
+                <p class="upper">{{block}}</p>
+            </div>
+            <div *ngIf="i == 2" (click)="addLetter('Backspace')" class="kb-key block delete clickable bigger">
+                <i class="fa-solid fa-delete-left"></i>
+            </div>
+        </div>
+    </div>
+</div>

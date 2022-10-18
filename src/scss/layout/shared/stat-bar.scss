@@ -1,0 +1,66 @@
+.stat-bar-elem {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .sbe-legend {
+        display: flex;
+        gap: 2rem;
+        @include medium {
+            gap: 1.3rem;
+        }
+    }
+
+    .sbe-legend-div {
+        display: flex;
+        gap: .8rem;
+        @include medium {
+            flex-direction: column;
+            gap: .5rem;
+        }
+        .sbel-color {
+            height: 100%;
+            width: 2rem;
+            border-radius: .5rem;
+            @include medium {
+                height: 1rem;
+                width: 100%;
+            }
+        }
+        .sbel-title {
+            text-transform: capitalize;
+            @include medium {
+                font-size: 1.5rem;
+            }
+            @include mobile{
+                font-size: 1.3rem;
+            }
+        }
+    }
+    
+    .cont-sbe {  
+        height: 4rem;
+        border-radius: 1rem;
+        display: flex;
+        overflow: hidden;
+        background-color: rgb(192, 186, 255);
+        @include medium {
+            height: 3.2rem;
+            border-radius: .3rem;
+        }
+    }
+    
+    .stat-bar-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        &.void {
+            background-color: transparent;
+            width: 100%;
+        }
+        p {
+            color: rgb(51, 51, 51)!important;
+        }
+    }
+}
+

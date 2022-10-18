@@ -1,0 +1,15 @@
+.progress-bar {
+    margin-top: 3rem;
+}
+
+.cont-pb {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    @include mobile {
+        padding: 2rem 1.7rem;
+    }
+    
+}

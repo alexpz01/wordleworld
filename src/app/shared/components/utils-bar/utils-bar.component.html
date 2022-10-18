@@ -1,0 +1,35 @@
+<div class="ub">
+    <app-menu [show]="showMenu" (hideEvent)="swichMenuVisibility(false)"></app-menu>
+    <app-blackscreen [show]="showMenu" (hideEvent)="swichMenuVisibility(false)"></app-blackscreen>
+    <div class="cont-ub">
+        <div class="ub-left ub-section">
+            <div class="ub-nightmode">
+                <i (click)="changeLayoutMode()" class="fa-solid fa-moon clickable opacity short"></i>
+            </div>
+        </div>
+
+        <div class="ub-center ub-section">
+            <a [routerLink]="['/']" (click)="swichMenuVisibility(false)" class="ub-title">
+                <h1>WORDLE <span [ngStyle]="{'font-weight' : 300}">WORLD</span> </h1>
+            </a>
+            <p *ngIf="wordleGlobalService.wordleMode.length > 0" class="wordle-type">{{wordleGlobalService.wordleMode}}</p>
+        </div>
+
+        <div class="ub-right ub-section">
+            <div class="ub-user" >
+                <div *ngIf="logged.isLogged(); then loggedin else loggedout"></div>
+                <ng-template #loggedin>
+                    <i class="fa-solid fa-user clickable opacity short" [routerLink]="['/profile']"></i>
+                </ng-template>
+                <ng-template #loggedout>
+                    <i (click)="openLogIn()" class="fa-solid fa-right-to-bracket clickable opacity short"></i>
+                </ng-template>
+            </div>
+
+            <div class="ub-menubutton">
+                <i (click)="swichMenuVisibility(true)" class="fa-solid fa-bars clickable opacity short"></i>
+            </div>
+        </div>
+    </div>
+    
+</div>

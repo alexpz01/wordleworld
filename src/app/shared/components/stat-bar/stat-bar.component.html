@@ -1,0 +1,16 @@
+<div class="stat-bar-elem">
+    <div *ngIf="!isVoid()" class="sbe-legend">
+        <div *ngFor="let title of stateBarDataNames; index as i" class="sbe-legend-div">
+            <div [ngStyle]="{'background-color' : getRealColor(stateBarColors[i])}" class="sbel-color"></div>
+            <p class="sbel-title">{{title}}</p>
+        </div>
+    </div>
+    <div class="cont-sbe dynamic">
+        <div *ngFor="let title of stateBarDataNames; index as i" class="stat-bar-div" [ngStyle]="{'background-color' : getRealColor(stateBarColors[i]), 'width' : stateBarPerc[i] + '%'}">
+            <p *ngIf="stateBarDataValues[i] > 0">{{stateBarDataValues[i]}}</p>
+        </div>
+        <div *ngIf="isVoid()"  class="stat-bar-div void">
+            <p>No hay datos aun</p>
+        </div>
+    </div>
+</div>

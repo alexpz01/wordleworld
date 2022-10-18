@@ -1,0 +1,27 @@
+.ub {
+    position: relative;
+}
+
+.cont-ub {
+    display: flex;
+    padding: 3rem 2rem .6rem 2rem;
+    align-items: center;
+    .ub-section {
+        flex-basis: 33%;
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+    .ub-left {
+        justify-content: flex-start;
+    }
+    .ub-right {
+        justify-content: flex-end;
+    }
+    .ub-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: .5rem;
+    } 
+}

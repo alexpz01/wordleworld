@@ -1,0 +1,48 @@
+<div [class.show]="show" class="menu dynamic terciary">
+    <div class="cont-menu">
+        <nav class="menu-nav">
+            <a *ngIf="!logged.isLogged()" (click)="close(); log(true)" class="menu-howplay menu-section clickable opacity">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <h3 class="secondary upper">Iniciar sesión</h3>
+            </a>
+            <a *ngIf="logged.isLogged()" [routerLink]="['/profile']" (click)="close()" class="menu-howplay menu-section clickable opacity">
+                <i class="fa-solid fa-user"></i>
+                <h3 class="secondary upper">Mi perfil</h3>
+            </a>
+            <a [routerLink]="['/wordle']" (click)="close()" class="menu-info menu-section clickable opacity">
+                <i class="fa-solid fa-border-all"></i>
+                <h3 class="secondary upper">Random Wordle</h3>
+            </a>
+            <a [routerLink]="['/survival']" (click)="close()" class="menu-howplay menu-section clickable opacity">
+                <i class="fa-solid fa-skull"></i>
+                <h3 class="secondary upper">Supervivencia</h3>
+            </a>
+            <a *ngIf="logged.isLogged()" (click)="close(); log(false)" class="menu-howplay menu-section clickable opacity">
+                <i class="fa-solid fa-xmark"></i>
+                <h3 class="secondary upper">Cerrar sesión</h3>
+            </a>
+            <a [routerLink]="['/howtoplay']" (click)="close()" class="menu-howplay menu-section clickable opacity">
+                <i class="fa-light fa-question"></i>
+                <h3 class="secondary upper">Como jugar</h3>
+            </a>         
+            <a [routerLink]="['/contact']" (click)="close()" class="menu-contact menu-section clickable opacity">
+                <i class="fa-solid fa-envelope"></i>
+                <h3 class="secondary upper">Contacto</h3>
+            </a>
+            <a [routerLink]="['/colabore']" (click)="close()" class="menu-donations menu-section clickable opacity">
+                <i class="fa-solid fa-euro-sign"></i>
+                <h3 class="secondary upper">Donar</h3>
+            </a>
+        </nav>
+        <footer class="menu-footer">
+            <div class="menu-socials">
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="menu-copy">
+                <p>&copy; WORDLE. Alejandro Romero. 2022</p>
+            </div>
+        </footer>
+    </div>
+</div>
